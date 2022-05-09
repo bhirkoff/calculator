@@ -4,6 +4,14 @@ let calculate=(num)=>{
   result.value += num;
 }
 
+function clr(){
+  result.value = " ";
+}
+
+function del(){
+  result.value = result.value.slice(0, -1);
+}
+
 let finalResult = () => {
   try {
     result.value = eval(result.value);
@@ -14,10 +22,10 @@ let finalResult = () => {
   }
 }
 
-let clr = () => {
-  result.value = " ";
-}
+const audio = new Audio('https://www.fesliyanstudios.com/play-mp3/387');
 
-let del = () => {
-  result.value = result.value.slice(0, -1);
-}
+const btn = document.querySelectorAll('button');
+
+btn.addEventListener('click', () => {
+  audio.play();
+})
